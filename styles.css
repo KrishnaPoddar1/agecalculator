@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+    --primary-purple: hsl(259, 100%, 65%);
+    --primary-lightRed: hsl(0, 100%, 67%);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-offWhite: hsl(0, 0%, 94%);
+    --neutral-lightGrey: hsl(0, 0%, 86%);
+    --neutral-smokeyGrey: hsl(0, 1%, 44%);
+    --neutral-offBlack: hsl(0, 0%, 8%);
+    
+    --fs-inputs: 32px;
+    --font-family: "Poppins", sans-serif;
+    --fw-regularItalic: 400;
+    --fw-bold: 700;
+    --fw-extraBoldItalic: 800;
+    --fontstyle-normal: normal;
+    --fontstyle-italic: italic;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--neutral-offWhite);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 20rem;
+    border:0;
+    border-radius: 2rem 2rem 5rem 2rem;
+    padding: 2rem;
+    position: relative;
+    background-color: var(--neutral-white);
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+    padding-bottom: 2rem;
+    border-bottom: 1px solid grey;
+    
+}
+
+.day{
+    display: flex;
+    flex-direction: column;
+}
+
+.day p{
+    font-size: xx-small;
+    color: var(--primary-lightRed);
+    font-weight: var(--fw-regularItalic);
+    font-style: var(--fontstyle-italic);
+}
+
+label {
+    color: var(--neutral-smokeyGrey);
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: small;
+}
+
+input {
+    width: 80%;
+    padding: 0.5rem;
+    border: 1px solid #999;
+    border-radius: 0.5rem;
+    font-weight: var(--fw-bold);
+    font-style: var(--fontstyle-normal);
+}
+
+.errormessage {
+    display: none;
+}
+
+.red{
+    border: 1px solid var(--primary-lightRed);
+}
+
+.redText{
+    color: var(--primary-lightRed);
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--primary-purple);
+    border: 0;
+    position: absolute;
+    right: 45%;
+    top: 30%;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--neutral-offBlack);
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+button img{
+    width: 55%;
+}
+
+.output {
+    margin-top: 2rem;
+    font-size: var(--fs-inputs);
+    font-weight: var(--fw-extraBoldItalic);
+    font-style: var(--fontstyle-italic);
+}
+
+.output p {
+    margin-bottom: 0;
+}
+
+#month, #day {
+    margin-top: 0;
+}
+
+.output span {
+    color: var(--primary-purple);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width:768px){
+    .container{
+        width: 30rem;
+    }
+
+    button {
+        right: 32px;
+    }
+}
